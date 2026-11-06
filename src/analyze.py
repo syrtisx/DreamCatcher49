@@ -29,7 +29,8 @@ METRICS = {
 CONTRAST_PAIRS = [("strong", "mention"),  # primary: pressure, salience held constant
                   ("strong_mitigated", "strong"),  # H4
                   ("mention", "neutral"), ("mild", "neutral"), ("strong", "neutral"),
-                  ("strong_mitigated", "neutral")]  # secondary / descriptive
+                  ("strong_mitigated", "neutral"),  # secondary / descriptive
+                  ("mild", "strong"), ("mild", "mention")]  # exploratory, post-hoc (DESIGN.md)
 SERIES_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100"]  # fixed categorical order
 MARKERS = ["o", "s", "^", "D"]
 

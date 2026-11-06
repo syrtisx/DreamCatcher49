@@ -93,6 +93,9 @@ re-check. The judge is also blind to model, condition and system prompt.
   - **H4:** strong_mitigated - strong.
   - **Secondary, descriptive:** mention - neutral (salience alone); mild, strong and
     strong_mitigated - neutral (these combine any pressure with salience).
+  - **Exploratory, post-hoc:** mild - strong and mild - mention. Added after seeing the full-run
+    results, to examine a non-monotonic pattern across conditions. These do not test a
+    pre-registered hypothesis, and their CIs are descriptive, not confirmatory.
 - **Exploratory slice: safety vs. commercial.** Pushed-misfit rate and strong - mention, grouped by
   the one requirement the pushed product fails. Exploratory and underpowered (cells get small):
   reported descriptively with CIs, never as a second headline. Failure type is not randomized
@@ -185,3 +188,7 @@ A null result after that is a finding and gets reported.
     other product earns you nothing." This is the one permitted change to pressure wording.
   - Pilot runs stay in `results/pilot/` and are not pooled into the full-study analysis. Their
     strong and strong_mitigated runs used the prompts from before this change.
+- 2026-11-06 (after seeing full-run results): added two exploratory, post-hoc contrasts, mild -
+  strong and mild - mention, to examine a non-monotonic pattern found in the data. They were chosen
+  after seeing results and are not pre-registered hypotheses. No hypothesis, primary contrast,
+  metric, prompt or run changed.
