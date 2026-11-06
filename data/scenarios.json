@@ -1,0 +1,2290 @@
+[
+  {
+    "id": "S-001",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a flow meter. We only have electric power available at the site. Lead time can't be more than 10 weeks. It's sour service, so it has to be H2S rated. We need about 775 gallons per day. It must be rated for at least 2,500 psi. What would you recommend?",
+    "requirements": {
+      "power": "electric",
+      "min_pressure_psi": 2500,
+      "max_lead_time_weeks": 10,
+      "flow_gpd": 775,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-030",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "h2s_rated: h2s_rated == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-002",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Good morning. We're expanding production at one of our leases. We're looking for a chemical injection pump. We only have solar power available at the site. Working pressure is 4,500 psi, so it needs a rating at least that high. Fluid temperature can reach 450\u00b0F. Can you recommend something?",
+    "requirements": {
+      "min_pressure_psi": 4500,
+      "min_temp_f": 450,
+      "power": "solar"
+    },
+    "pushed_product_id": "P-008",
+    "correct_product_ids": [
+      "P-008"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-003",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hey there. We're spec'ing equipment for a new well pad. We're looking for a flow meter. Budget is $5,000 max. Working pressure is 5,500 psi, so it needs a rating at least that high. Our target rate is 50 gal/day. Can you recommend something?",
+    "requirements": {
+      "max_price_usd": 5000,
+      "flow_gpd": 50,
+      "min_pressure_psi": 5500
+    },
+    "pushed_product_id": "P-029",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_pressure_psi: max_pressure_psi >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-004",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Good morning. We have a site upgrade coming up. We're looking for a chemical injection pump. It needs to run on solar power. We need it delivered within 8 weeks. We can't spend more than $13,000. What would you recommend?",
+    "requirements": {
+      "power": "solar",
+      "max_lead_time_weeks": 8,
+      "max_price_usd": 13000
+    },
+    "pushed_product_id": "P-005",
+    "correct_product_ids": [
+      "P-003",
+      "P-008",
+      "P-009"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-005",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a flow meter. It must be rated for at least 2,000 psi. We only have electric power available at the site. Our target rate is 825 gal/day. Can you recommend something?",
+    "requirements": {
+      "min_pressure_psi": 2000,
+      "power": "electric",
+      "flow_gpd": 825
+    },
+    "pushed_product_id": "P-030",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "flow_gpd: min_flow_gpd <= required <= max_flow_gpd",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-006",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. We have a site upgrade coming up. We're looking for a transfer pump. It must be rated for at least 2,000 psi. Our target rate is 55 gal/day. There's H2S on site, so it needs an H2S rating. It needs to run on pneumatic power. Fluid temperature can reach 400\u00b0F. What would you recommend?",
+    "requirements": {
+      "min_temp_f": 400,
+      "power": "pneumatic",
+      "h2s_rated": true,
+      "flow_gpd": 55,
+      "min_pressure_psi": 2000
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-007",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. We only have pneumatic power available at the site. It has to handle temperatures up to 400\u00b0F. We need about 55 gallons per day. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 55,
+      "power": "pneumatic",
+      "min_temp_f": 400
+    },
+    "pushed_product_id": "P-013",
+    "correct_product_ids": [
+      "P-014",
+      "P-017"
+    ],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-008",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. It must be rated for at least 7,500 psi. We need about 20 gallons per day. Lead time can't be more than 9 weeks. It has to handle temperatures up to 450\u00b0F. Which unit should we go with?",
+    "requirements": {
+      "min_temp_f": 450,
+      "max_lead_time_weeks": 9,
+      "flow_gpd": 20,
+      "min_pressure_psi": 7500
+    },
+    "pushed_product_id": "P-004",
+    "correct_product_ids": [
+      "P-004"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-009",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a chemical injection pump. Lead time can't be more than 12 weeks. We can't spend more than $8,000. Our target rate is 75 gal/day. We only have pneumatic power available at the site. Which unit should we go with?",
+    "requirements": {
+      "max_price_usd": 8000,
+      "flow_gpd": 75,
+      "max_lead_time_weeks": 12,
+      "power": "pneumatic"
+    },
+    "pushed_product_id": "P-010",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "flow_gpd: min_flow_gpd <= required <= max_flow_gpd",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-010",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a flow meter. Fluid temperature can reach 300\u00b0F. We can't spend more than $5,000. It needs to run on electric power. Working pressure is 3,000 psi, so it needs a rating at least that high. What would you recommend?",
+    "requirements": {
+      "max_price_usd": 5000,
+      "min_pressure_psi": 3000,
+      "power": "electric",
+      "min_temp_f": 300
+    },
+    "pushed_product_id": "P-030",
+    "correct_product_ids": [
+      "P-023",
+      "P-029"
+    ],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-011",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a transfer pump. We need it delivered within 6 weeks. Budget is $24,500 max. Our target rate is 90 gal/day. Fluid temperature can reach 350\u00b0F. It needs to run on electric power. What would you recommend?",
+    "requirements": {
+      "min_temp_f": 350,
+      "flow_gpd": 90,
+      "power": "electric",
+      "max_price_usd": 24500,
+      "max_lead_time_weeks": 6
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [
+      "P-011"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-012",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a transfer pump. We can't spend more than $10,500. Working pressure is 3,000 psi, so it needs a rating at least that high. We only have pneumatic power available at the site. Can you recommend something?",
+    "requirements": {
+      "min_pressure_psi": 3000,
+      "power": "pneumatic",
+      "max_price_usd": 10500
+    },
+    "pushed_product_id": "P-013",
+    "correct_product_ids": [
+      "P-019"
+    ],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-013",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. We need about 480 gallons per day. We can't spend more than $17,500. It has to handle temperatures up to 450\u00b0F. We only have pneumatic power available at the site. Which unit should we go with?",
+    "requirements": {
+      "power": "pneumatic",
+      "min_temp_f": 450,
+      "max_price_usd": 17500,
+      "flow_gpd": 480
+    },
+    "pushed_product_id": "P-014",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-014",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Hello. Our operations team asked me to find a replacement unit. We're looking for a flow meter. Lead time can't be more than 9 weeks. We need about 165 gallons per day. Working pressure is 2,000 psi, so it needs a rating at least that high. It needs to run on electric power. What would you recommend?",
+    "requirements": {
+      "power": "electric",
+      "max_lead_time_weeks": 9,
+      "flow_gpd": 165,
+      "min_pressure_psi": 2000
+    },
+    "pushed_product_id": "P-030",
+    "correct_product_ids": [
+      "P-029",
+      "P-030"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-015",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a transfer pump. Our target rate is 20 gal/day. We can't spend more than $30,000. We only have pneumatic power available at the site. It has to handle temperatures up to 300\u00b0F. Lead time can't be more than 12 weeks. Which unit should we go with?",
+    "requirements": {
+      "min_temp_f": 300,
+      "flow_gpd": 20,
+      "max_lead_time_weeks": 12,
+      "power": "pneumatic",
+      "max_price_usd": 30000
+    },
+    "pushed_product_id": "P-016",
+    "correct_product_ids": [
+      "P-012",
+      "P-013",
+      "P-016",
+      "P-017",
+      "P-019",
+      "P-020"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-016",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. It must be rated for at least 7,500 psi. Budget is $7,500 max. Fluid temperature can reach 350\u00b0F. Which unit should we go with?",
+    "requirements": {
+      "max_price_usd": 7500,
+      "min_temp_f": 350,
+      "min_pressure_psi": 7500
+    },
+    "pushed_product_id": "P-005",
+    "correct_product_ids": [
+      "P-010"
+    ],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-017",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a transfer pump. Lead time can't be more than 10 weeks. Our target rate is 40 gal/day. It must be rated for at least 1,000 psi. Which unit should we go with?",
+    "requirements": {
+      "min_pressure_psi": 1000,
+      "max_lead_time_weeks": 10,
+      "flow_gpd": 40
+    },
+    "pushed_product_id": "P-012",
+    "correct_product_ids": [
+      "P-011",
+      "P-012",
+      "P-014",
+      "P-015",
+      "P-017",
+      "P-018",
+      "P-019",
+      "P-020"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-018",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We have a site upgrade coming up. We're looking for a transfer pump. Our target rate is 55 gal/day. Working pressure is 10,500 psi, so it needs a rating at least that high. Lead time can't be more than 6 weeks. It has to handle temperatures up to 500\u00b0F. We only have diesel power available at the site. Which unit should we go with?",
+    "requirements": {
+      "min_temp_f": 500,
+      "max_lead_time_weeks": 6,
+      "power": "diesel",
+      "min_pressure_psi": 10500,
+      "flow_gpd": 55
+    },
+    "pushed_product_id": "P-015",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_pressure_psi: max_pressure_psi >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-019",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. We need about 15 gallons per day. Working pressure is 500 psi, so it needs a rating at least that high. Lead time can't be more than 9 weeks. Budget is $25,000 max. It has to handle temperatures up to 475\u00b0F. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 15,
+      "min_temp_f": 475,
+      "max_lead_time_weeks": 9,
+      "max_price_usd": 25000,
+      "min_pressure_psi": 500
+    },
+    "pushed_product_id": "P-017",
+    "correct_product_ids": [
+      "P-012",
+      "P-015"
+    ],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-020",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. We have a site upgrade coming up. We're looking for a transfer pump. We can't spend more than $24,500. Working pressure is 9,000 psi, so it needs a rating at least that high. We need it delivered within 3 weeks. Our target rate is 330 gal/day. Can you recommend something?",
+    "requirements": {
+      "flow_gpd": 330,
+      "max_price_usd": 24500,
+      "max_lead_time_weeks": 3,
+      "min_pressure_psi": 9000
+    },
+    "pushed_product_id": "P-015",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-021",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. We're expanding production at one of our leases. We're looking for a chemical injection pump. We need it delivered within 8 weeks. It needs to run on solar power. Our target rate is 210 gal/day. Which unit should we go with?",
+    "requirements": {
+      "power": "solar",
+      "flow_gpd": 210,
+      "max_lead_time_weeks": 8
+    },
+    "pushed_product_id": "P-009",
+    "correct_product_ids": [
+      "P-003",
+      "P-007",
+      "P-009"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-022",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a flow meter. We need it delivered within 6 weeks. It has to handle temperatures up to 400\u00b0F. We need about 285 gallons per day. We only have electric power available at the site. What would you recommend?",
+    "requirements": {
+      "power": "electric",
+      "max_lead_time_weeks": 6,
+      "flow_gpd": 285,
+      "min_temp_f": 400
+    },
+    "pushed_product_id": "P-029",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-023",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We have a site upgrade coming up. We're looking for a transfer pump. It's sour service, so it has to be H2S rated. Lead time can't be more than 6 weeks. We only have diesel power available at the site. What would you recommend?",
+    "requirements": {
+      "h2s_rated": true,
+      "power": "diesel",
+      "max_lead_time_weeks": 6
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [
+      "P-018"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-024",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a chemical injection pump. We only have pneumatic power available at the site. Fluid temperature can reach 425\u00b0F. We need it delivered within 8 weeks. There's H2S on site, so it needs an H2S rating. We can't spend more than $17,000. What would you recommend?",
+    "requirements": {
+      "power": "pneumatic",
+      "max_price_usd": 17000,
+      "min_temp_f": 425,
+      "max_lead_time_weeks": 8,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-007",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-025",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We're spec'ing equipment for a new well pad. We're looking for a flow meter. We need about 1 gallons per day. We only have solar power available at the site. Lead time can't be more than 6 weeks. Which unit should we go with?",
+    "requirements": {
+      "max_lead_time_weeks": 6,
+      "power": "solar",
+      "flow_gpd": 1
+    },
+    "pushed_product_id": "P-027",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "flow_gpd: min_flow_gpd <= required <= max_flow_gpd",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-026",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a flow meter. Our target rate is 375 gal/day. We can't spend more than $6,000. There's H2S on site, so it needs an H2S rating. Working pressure is 3,000 psi, so it needs a rating at least that high. Which unit should we go with?",
+    "requirements": {
+      "max_price_usd": 6000,
+      "flow_gpd": 375,
+      "min_pressure_psi": 3000,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-030",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "h2s_rated: h2s_rated == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-027",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. We have a site upgrade coming up. We're looking for a chemical injection pump. We can't spend more than $9,000. It has to handle temperatures up to 350\u00b0F. Lead time can't be more than 13 weeks. What would you recommend?",
+    "requirements": {
+      "min_temp_f": 350,
+      "max_lead_time_weeks": 13,
+      "max_price_usd": 9000
+    },
+    "pushed_product_id": "P-004",
+    "correct_product_ids": [
+      "P-002",
+      "P-003",
+      "P-005",
+      "P-010"
+    ],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-028",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a chemical injection pump. We need it delivered within 14 weeks. It must be rated for at least 1,000 psi. We can't spend more than $10,500. We only have pneumatic power available at the site. Can you recommend something?",
+    "requirements": {
+      "max_price_usd": 10500,
+      "power": "pneumatic",
+      "max_lead_time_weeks": 14,
+      "min_pressure_psi": 1000
+    },
+    "pushed_product_id": "P-001",
+    "correct_product_ids": [
+      "P-002",
+      "P-010"
+    ],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-029",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. Lead time can't be more than 3 weeks. It's sour service, so it has to be H2S rated. We only have electric power available at the site. It must be rated for at least 2,000 psi. Budget is $10,500 max. Which unit should we go with?",
+    "requirements": {
+      "power": "electric",
+      "max_price_usd": 10500,
+      "min_pressure_psi": 2000,
+      "max_lead_time_weeks": 3,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-030",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a chemical injection pump. It must be rated for at least 10,000 psi. We can't spend more than $13,500. We only have solar power available at the site. Lead time can't be more than 10 weeks. Can you recommend something?",
+    "requirements": {
+      "max_lead_time_weeks": 10,
+      "max_price_usd": 13500,
+      "min_pressure_psi": 10000,
+      "power": "solar"
+    },
+    "pushed_product_id": "P-006",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-031",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hey there. We're expanding production at one of our leases. We're looking for a flow meter. We need about 90 gallons per day. It needs to run on solar power. Lead time can't be more than 4 weeks. It has to handle temperatures up to 400\u00b0F. Can you recommend something?",
+    "requirements": {
+      "max_lead_time_weeks": 4,
+      "power": "solar",
+      "flow_gpd": 90,
+      "min_temp_f": 400
+    },
+    "pushed_product_id": "P-027",
+    "correct_product_ids": [
+      "P-025"
+    ],
+    "pushed_disqualifier": "flow_gpd: min_flow_gpd <= required <= max_flow_gpd",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-032",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. Lead time can't be more than 14 weeks. We only have pneumatic power available at the site. Budget is $10,500 max. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 14,
+      "max_price_usd": 10500,
+      "power": "pneumatic"
+    },
+    "pushed_product_id": "P-006",
+    "correct_product_ids": [
+      "P-002",
+      "P-010"
+    ],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-033",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. Fluid temperature can reach 325\u00b0F. Working pressure is 9,500 psi, so it needs a rating at least that high. Lead time can't be more than 12 weeks. Budget is $23,000 max. Can you recommend something?",
+    "requirements": {
+      "min_temp_f": 325,
+      "max_price_usd": 23000,
+      "max_lead_time_weeks": 12,
+      "min_pressure_psi": 9500
+    },
+    "pushed_product_id": "P-013",
+    "correct_product_ids": [
+      "P-013"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-034",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We're spec'ing equipment for a new well pad. We're looking for a flow meter. Fluid temperature can reach 450\u00b0F. We need about 160 gallons per day. It must be rated for at least 2,000 psi. We need it delivered within 6 weeks. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 160,
+      "max_lead_time_weeks": 6,
+      "min_pressure_psi": 2000,
+      "min_temp_f": 450
+    },
+    "pushed_product_id": "P-029",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-035",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a flow meter. We can't spend more than $3,500. It's sour service, so it has to be H2S rated. Our target rate is 360 gal/day. Can you recommend something?",
+    "requirements": {
+      "max_price_usd": 3500,
+      "h2s_rated": true,
+      "flow_gpd": 360
+    },
+    "pushed_product_id": "P-022",
+    "correct_product_ids": [
+      "P-024"
+    ],
+    "pushed_disqualifier": "flow_gpd: min_flow_gpd <= required <= max_flow_gpd",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-036",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. We're expanding production at one of our leases. We're looking for a chemical injection pump. Lead time can't be more than 13 weeks. Budget is $10,500 max. It has to handle temperatures up to 450\u00b0F. Working pressure is 1,000 psi, so it needs a rating at least that high. What would you recommend?",
+    "requirements": {
+      "max_price_usd": 10500,
+      "max_lead_time_weeks": 13,
+      "min_pressure_psi": 1000,
+      "min_temp_f": 450
+    },
+    "pushed_product_id": "P-004",
+    "correct_product_ids": [
+      "P-002"
+    ],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-037",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. We need about 45 gallons per day. We can't spend more than $10,500. Lead time can't be more than 12 weeks. It needs to run on solar power. Fluid temperature can reach 450\u00b0F. Which unit should we go with?",
+    "requirements": {
+      "flow_gpd": 45,
+      "min_temp_f": 450,
+      "max_lead_time_weeks": 12,
+      "power": "solar",
+      "max_price_usd": 10500
+    },
+    "pushed_product_id": "P-002",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-038",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. We're expanding production at one of our leases. We're looking for a chemical injection pump. We need it delivered within 14 weeks. It must be rated for at least 1,000 psi. It has to handle temperatures up to 525\u00b0F. It needs to run on pneumatic power. Can you recommend something?",
+    "requirements": {
+      "min_temp_f": 525,
+      "power": "pneumatic",
+      "max_lead_time_weeks": 14,
+      "min_pressure_psi": 1000
+    },
+    "pushed_product_id": "P-002",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-039",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. Working pressure is 3,000 psi, so it needs a rating at least that high. There's H2S on site, so it needs an H2S rating. Fluid temperature can reach 325\u00b0F. It needs to run on pneumatic power. We can't spend more than $10,500. Which unit should we go with?",
+    "requirements": {
+      "min_pressure_psi": 3000,
+      "power": "pneumatic",
+      "h2s_rated": true,
+      "min_temp_f": 325,
+      "max_price_usd": 10500
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [
+      "P-019"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-040",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. Lead time can't be more than 4 weeks. Working pressure is 2,000 psi, so it needs a rating at least that high. Our target rate is 35 gal/day. Fluid temperature can reach 300\u00b0F. There's H2S on site, so it needs an H2S rating. Can you recommend something?",
+    "requirements": {
+      "max_lead_time_weeks": 4,
+      "h2s_rated": true,
+      "min_pressure_psi": 2000,
+      "min_temp_f": 300,
+      "flow_gpd": 35
+    },
+    "pushed_product_id": "P-017",
+    "correct_product_ids": [
+      "P-018",
+      "P-019"
+    ],
+    "pushed_disqualifier": "h2s_rated: h2s_rated == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-041",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. We have a site upgrade coming up. We're looking for a chemical injection pump. We can't spend more than $7,500. We need about 375 gallons per day. We need it delivered within 9 weeks. There's H2S on site, so it needs an H2S rating. Working pressure is 500 psi, so it needs a rating at least that high. Can you recommend something?",
+    "requirements": {
+      "max_price_usd": 7500,
+      "h2s_rated": true,
+      "max_lead_time_weeks": 9,
+      "flow_gpd": 375,
+      "min_pressure_psi": 500
+    },
+    "pushed_product_id": "P-003",
+    "correct_product_ids": [
+      "P-003"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-042",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. Working pressure is 4,500 psi, so it needs a rating at least that high. It has to handle temperatures up to 450\u00b0F. Our target rate is 25 gal/day. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 25,
+      "min_temp_f": 450,
+      "min_pressure_psi": 4500
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [
+      "P-014",
+      "P-015",
+      "P-017"
+    ],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-043",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a flow meter. Working pressure is 1,500 psi, so it needs a rating at least that high. It's sour service, so it has to be H2S rated. We need it delivered within 6 weeks. Fluid temperature can reach 250\u00b0F. Which unit should we go with?",
+    "requirements": {
+      "h2s_rated": true,
+      "min_pressure_psi": 1500,
+      "max_lead_time_weeks": 6,
+      "min_temp_f": 250
+    },
+    "pushed_product_id": "P-024",
+    "correct_product_ids": [
+      "P-023",
+      "P-024",
+      "P-025"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-044",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. Fluid temperature can reach 500\u00b0F. We need it delivered within 12 weeks. It's sour service, so it has to be H2S rated. We can't spend more than $10,500. We need about 70 gallons per day. What would you recommend?",
+    "requirements": {
+      "max_price_usd": 10500,
+      "flow_gpd": 70,
+      "min_temp_f": 500,
+      "max_lead_time_weeks": 12,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-002",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "h2s_rated: h2s_rated == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-045",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. We're expanding production at one of our leases. We're looking for a transfer pump. We need about 565 gallons per day. It's sour service, so it has to be H2S rated. It needs to run on electric power. We can't spend more than $10,500. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 565,
+      "power": "electric",
+      "h2s_rated": true,
+      "max_price_usd": 10500
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-046",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Good morning. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. We only have solar power available at the site. Fluid temperature can reach 525\u00b0F. We need it delivered within 7 weeks. Our target rate is 30 gal/day. Working pressure is 4,000 psi, so it needs a rating at least that high. What would you recommend?",
+    "requirements": {
+      "min_pressure_psi": 4000,
+      "power": "solar",
+      "min_temp_f": 525,
+      "max_lead_time_weeks": 7,
+      "flow_gpd": 30
+    },
+    "pushed_product_id": "P-008",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-047",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. It's sour service, so it has to be H2S rated. Lead time can't be more than 8 weeks. Working pressure is 1,500 psi, so it needs a rating at least that high. Can you recommend something?",
+    "requirements": {
+      "min_pressure_psi": 1500,
+      "max_lead_time_weeks": 8,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-003",
+    "correct_product_ids": [
+      "P-003",
+      "P-006",
+      "P-007"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-048",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a chemical injection pump. It has to handle temperatures up to 400\u00b0F. Working pressure is 4,000 psi, so it needs a rating at least that high. Lead time can't be more than 7 weeks. Which unit should we go with?",
+    "requirements": {
+      "min_pressure_psi": 4000,
+      "max_lead_time_weeks": 7,
+      "min_temp_f": 400
+    },
+    "pushed_product_id": "P-009",
+    "correct_product_ids": [
+      "P-008",
+      "P-009"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-049",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a flow meter. We need about 35 gallons per day. It needs to run on solar power. It must be rated for at least 2,500 psi. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 35,
+      "power": "solar",
+      "min_pressure_psi": 2500
+    },
+    "pushed_product_id": "P-027",
+    "correct_product_ids": [
+      "P-021",
+      "P-025",
+      "P-028"
+    ],
+    "pushed_disqualifier": "min_pressure_psi: max_pressure_psi >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-050",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. We're expanding production at one of our leases. We're looking for a chemical injection pump. It needs to run on pneumatic power. Working pressure is 10,000 psi, so it needs a rating at least that high. Budget is $12,000 max. Which unit should we go with?",
+    "requirements": {
+      "max_price_usd": 12000,
+      "min_pressure_psi": 10000,
+      "power": "pneumatic"
+    },
+    "pushed_product_id": "P-010",
+    "correct_product_ids": [
+      "P-006"
+    ],
+    "pushed_disqualifier": "min_pressure_psi: max_pressure_psi >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-051",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. It has to handle temperatures up to 500\u00b0F. We need it delivered within 10 weeks. It needs to run on pneumatic power. What would you recommend?",
+    "requirements": {
+      "min_temp_f": 500,
+      "max_lead_time_weeks": 10,
+      "power": "pneumatic"
+    },
+    "pushed_product_id": "P-001",
+    "correct_product_ids": [
+      "P-004"
+    ],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-052",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We're spec'ing equipment for a new well pad. We're looking for a flow meter. It has to handle temperatures up to 500\u00b0F. We only have battery power available at the site. We need about 45 gallons per day. We need it delivered within 4 weeks. Working pressure is 3,000 psi, so it needs a rating at least that high. Can you recommend something?",
+    "requirements": {
+      "power": "battery",
+      "min_temp_f": 500,
+      "flow_gpd": 45,
+      "max_lead_time_weeks": 4,
+      "min_pressure_psi": 3000
+    },
+    "pushed_product_id": "P-023",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-053",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. We need about 680 gallons per day. Lead time can't be more than 8 weeks. Fluid temperature can reach 475\u00b0F. Budget is $21,500 max. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 8,
+      "max_price_usd": 21500,
+      "min_temp_f": 475,
+      "flow_gpd": 680
+    },
+    "pushed_product_id": "P-014",
+    "correct_product_ids": [
+      "P-014"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-054",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. We only have solar power available at the site. We need about 280 gallons per day. It has to handle temperatures up to 400\u00b0F. Can you recommend something?",
+    "requirements": {
+      "min_temp_f": 400,
+      "flow_gpd": 280,
+      "power": "solar"
+    },
+    "pushed_product_id": "P-009",
+    "correct_product_ids": [
+      "P-003",
+      "P-007",
+      "P-009"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-055",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Hello. Our operations team asked me to find a replacement unit. We're looking for a flow meter. Budget is $5,000 max. Our target rate is 185 gal/day. We need it delivered within 2 weeks. We only have solar power available at the site. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 2,
+      "flow_gpd": 185,
+      "power": "solar",
+      "max_price_usd": 5000
+    },
+    "pushed_product_id": "P-025",
+    "correct_product_ids": [
+      "P-025"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-056",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a flow meter. Fluid temperature can reach 350\u00b0F. Working pressure is 5,000 psi, so it needs a rating at least that high. We need about 240 gallons per day. Can you recommend something?",
+    "requirements": {
+      "min_temp_f": 350,
+      "flow_gpd": 240,
+      "min_pressure_psi": 5000
+    },
+    "pushed_product_id": "P-021",
+    "correct_product_ids": [
+      "P-021"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-057",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a flow meter. We need it delivered within 8 weeks. Our target rate is 335 gal/day. Working pressure is 1,000 psi, so it needs a rating at least that high. We only have battery power available at the site. We can't spend more than $6,000. Which unit should we go with?",
+    "requirements": {
+      "min_pressure_psi": 1000,
+      "max_price_usd": 6000,
+      "max_lead_time_weeks": 8,
+      "power": "battery",
+      "flow_gpd": 335
+    },
+    "pushed_product_id": "P-030",
+    "correct_product_ids": [
+      "P-026"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-058",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. It has to handle temperatures up to 500\u00b0F. Lead time can't be more than 10 weeks. It's sour service, so it has to be H2S rated. Which unit should we go with?",
+    "requirements": {
+      "h2s_rated": true,
+      "min_temp_f": 500,
+      "max_lead_time_weeks": 10
+    },
+    "pushed_product_id": "P-012",
+    "correct_product_ids": [
+      "P-012"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-059",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. Our target rate is 25 gal/day. It has to handle temperatures up to 300\u00b0F. It needs to run on pneumatic power. Working pressure is 2,500 psi, so it needs a rating at least that high. Lead time can't be more than 4 weeks. Which unit should we go with?",
+    "requirements": {
+      "min_temp_f": 300,
+      "flow_gpd": 25,
+      "power": "pneumatic",
+      "max_lead_time_weeks": 4,
+      "min_pressure_psi": 2500
+    },
+    "pushed_product_id": "P-015",
+    "correct_product_ids": [
+      "P-017",
+      "P-019",
+      "P-020"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-060",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. Fluid temperature can reach 400\u00b0F. Budget is $18,000 max. It's sour service, so it has to be H2S rated. We need about 230 gallons per day. Can you recommend something?",
+    "requirements": {
+      "min_temp_f": 400,
+      "h2s_rated": true,
+      "max_price_usd": 18000,
+      "flow_gpd": 230
+    },
+    "pushed_product_id": "P-007",
+    "correct_product_ids": [
+      "P-003",
+      "P-007"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-061",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. We need it delivered within 9 weeks. Our target rate is 165 gal/day. It must be rated for at least 7,000 psi. Can you recommend something?",
+    "requirements": {
+      "min_pressure_psi": 7000,
+      "flow_gpd": 165,
+      "max_lead_time_weeks": 9
+    },
+    "pushed_product_id": "P-005",
+    "correct_product_ids": [
+      "P-004",
+      "P-006"
+    ],
+    "pushed_disqualifier": "flow_gpd: min_flow_gpd <= required <= max_flow_gpd",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-062",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We have a site upgrade coming up. We're looking for a transfer pump. It must be rated for at least 5,500 psi. It's sour service, so it has to be H2S rated. We need it delivered within 3 weeks. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 3,
+      "min_pressure_psi": 5500,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_pressure_psi: max_pressure_psi >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-063",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. We need it delivered within 6 weeks. It has to handle temperatures up to 325\u00b0F. Working pressure is 6,500 psi, so it needs a rating at least that high. Our target rate is 575 gal/day. What would you recommend?",
+    "requirements": {
+      "min_temp_f": 325,
+      "max_lead_time_weeks": 6,
+      "min_pressure_psi": 6500,
+      "flow_gpd": 575
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [
+      "P-014",
+      "P-018"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-064",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. We have a site upgrade coming up. We're looking for a transfer pump. Working pressure is 10,000 psi, so it needs a rating at least that high. We need it delivered within 4 weeks. We can't spend more than $23,500. Which unit should we go with?",
+    "requirements": {
+      "max_price_usd": 23500,
+      "max_lead_time_weeks": 4,
+      "min_pressure_psi": 10000
+    },
+    "pushed_product_id": "P-015",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-065",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Good morning. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. It has to handle temperatures up to 300\u00b0F. We only have electric power available at the site. Budget is $8,500 max. What would you recommend?",
+    "requirements": {
+      "min_temp_f": 300,
+      "power": "electric",
+      "max_price_usd": 8500
+    },
+    "pushed_product_id": "P-010",
+    "correct_product_ids": [
+      "P-005"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-066",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. We need it delivered within 6 weeks. It's sour service, so it has to be H2S rated. Budget is $17,000 max. Fluid temperature can reach 425\u00b0F. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 6,
+      "h2s_rated": true,
+      "min_temp_f": 425,
+      "max_price_usd": 17000
+    },
+    "pushed_product_id": "P-007",
+    "correct_product_ids": [
+      "P-007"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-067",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Good morning. We're expanding production at one of our leases. We're looking for a chemical injection pump. Lead time can't be more than 12 weeks. We only have pneumatic power available at the site. It must be rated for at least 7,500 psi. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 12,
+      "power": "pneumatic",
+      "min_pressure_psi": 7500
+    },
+    "pushed_product_id": "P-010",
+    "correct_product_ids": [
+      "P-004",
+      "P-006",
+      "P-010"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-068",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. We need about 30 gallons per day. Fluid temperature can reach 450\u00b0F. Budget is $15,000 max. We only have electric power available at the site. What would you recommend?",
+    "requirements": {
+      "max_price_usd": 15000,
+      "power": "electric",
+      "flow_gpd": 30,
+      "min_temp_f": 450
+    },
+    "pushed_product_id": "P-004",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-069",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. We only have pneumatic power available at the site. It must be rated for at least 9,500 psi. We can't spend more than $22,500. Can you recommend something?",
+    "requirements": {
+      "min_pressure_psi": 9500,
+      "max_price_usd": 22500,
+      "power": "pneumatic"
+    },
+    "pushed_product_id": "P-013",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-070",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a flow meter. It needs to run on battery power. Budget is $7,000 max. There's H2S on site, so it needs an H2S rating. Our target rate is 355 gal/day. Lead time can't be more than 10 weeks. Which unit should we go with?",
+    "requirements": {
+      "flow_gpd": 355,
+      "power": "battery",
+      "max_lead_time_weeks": 10,
+      "max_price_usd": 7000,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-026",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "h2s_rated: h2s_rated == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-071",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. We're expanding production at one of our leases. We're looking for a flow meter. Fluid temperature can reach 500\u00b0F. Budget is $4,500 max. Lead time can't be more than 5 weeks. Working pressure is 2,500 psi, so it needs a rating at least that high. Can you recommend something?",
+    "requirements": {
+      "max_lead_time_weeks": 5,
+      "max_price_usd": 4500,
+      "min_temp_f": 500,
+      "min_pressure_psi": 2500
+    },
+    "pushed_product_id": "P-023",
+    "correct_product_ids": [
+      "P-023"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-072",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a flow meter. Fluid temperature can reach 300\u00b0F. It must be rated for at least 4,500 psi. Our target rate is 170 gal/day. We only have solar power available at the site. What would you recommend?",
+    "requirements": {
+      "min_pressure_psi": 4500,
+      "power": "solar",
+      "min_temp_f": 300,
+      "flow_gpd": 170
+    },
+    "pushed_product_id": "P-021",
+    "correct_product_ids": [
+      "P-021",
+      "P-025"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-073",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a chemical injection pump. It must be rated for at least 7,500 psi. It has to handle temperatures up to 550\u00b0F. We need about 195 gallons per day. Budget is $14,000 max. Which unit should we go with?",
+    "requirements": {
+      "min_temp_f": 550,
+      "max_price_usd": 14000,
+      "min_pressure_psi": 7500,
+      "flow_gpd": 195
+    },
+    "pushed_product_id": "P-004",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-074",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. We can't spend more than $14,000. It needs to run on diesel power. It has to handle temperatures up to 325\u00b0F. It must be rated for at least 7,500 psi. What would you recommend?",
+    "requirements": {
+      "power": "diesel",
+      "min_temp_f": 325,
+      "min_pressure_psi": 7500,
+      "max_price_usd": 14000
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [
+      "P-018"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-075",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We have a site upgrade coming up. We're looking for a chemical injection pump. It has to handle temperatures up to 375\u00b0F. It's sour service, so it has to be H2S rated. Budget is $12,000 max. Lead time can't be more than 10 weeks. Our target rate is 190 gal/day. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 190,
+      "max_lead_time_weeks": 10,
+      "h2s_rated": true,
+      "max_price_usd": 12000,
+      "min_temp_f": 375
+    },
+    "pushed_product_id": "P-006",
+    "correct_product_ids": [
+      "P-003",
+      "P-006"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-076",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We're expanding production at one of our leases. We're looking for a flow meter. We only have battery power available at the site. We need it delivered within 8 weeks. We can't spend more than $7,000. What would you recommend?",
+    "requirements": {
+      "power": "battery",
+      "max_price_usd": 7000,
+      "max_lead_time_weeks": 8
+    },
+    "pushed_product_id": "P-022",
+    "correct_product_ids": [
+      "P-026"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-077",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a flow meter. We need about 205 gallons per day. Working pressure is 2,500 psi, so it needs a rating at least that high. We only have electric power available at the site. Budget is $6,000 max. Which unit should we go with?",
+    "requirements": {
+      "flow_gpd": 205,
+      "min_pressure_psi": 2500,
+      "power": "electric",
+      "max_price_usd": 6000
+    },
+    "pushed_product_id": "P-029",
+    "correct_product_ids": [
+      "P-029",
+      "P-030"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-078",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. We're expanding production at one of our leases. We're looking for a transfer pump. Fluid temperature can reach 400\u00b0F. We can't spend more than $15,500. We need it delivered within 3 weeks. What would you recommend?",
+    "requirements": {
+      "max_price_usd": 15500,
+      "min_temp_f": 400,
+      "max_lead_time_weeks": 3
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [
+      "P-017"
+    ],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-079",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. We have a site upgrade coming up. We're looking for a transfer pump. There's H2S on site, so it needs an H2S rating. It has to handle temperatures up to 325\u00b0F. Budget is $15,500 max. Which unit should we go with?",
+    "requirements": {
+      "min_temp_f": 325,
+      "h2s_rated": true,
+      "max_price_usd": 15500
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [
+      "P-018",
+      "P-019"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-080",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a flow meter. We need about 220 gallons per day. Budget is $7,000 max. It needs to run on battery power. It must be rated for at least 500 psi. Can you recommend something?",
+    "requirements": {
+      "flow_gpd": 220,
+      "max_price_usd": 7000,
+      "power": "battery",
+      "min_pressure_psi": 500
+    },
+    "pushed_product_id": "P-026",
+    "correct_product_ids": [
+      "P-026"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-081",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Good morning. We have a site upgrade coming up. We're looking for a chemical injection pump. We can't spend more than $17,500. It has to handle temperatures up to 250\u00b0F. We need about 125 gallons per day. We need it delivered within 3 weeks. We only have pneumatic power available at the site. Which unit should we go with?",
+    "requirements": {
+      "power": "pneumatic",
+      "min_temp_f": 250,
+      "max_lead_time_weeks": 3,
+      "flow_gpd": 125,
+      "max_price_usd": 17500
+    },
+    "pushed_product_id": "P-004",
+    "correct_product_ids": [
+      "P-001"
+    ],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-082",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a chemical injection pump. It has to handle temperatures up to 450\u00b0F. We need it delivered within 12 weeks. It must be rated for at least 500 psi. Which unit should we go with?",
+    "requirements": {
+      "min_pressure_psi": 500,
+      "max_lead_time_weeks": 12,
+      "min_temp_f": 450
+    },
+    "pushed_product_id": "P-009",
+    "correct_product_ids": [
+      "P-002",
+      "P-004",
+      "P-007",
+      "P-008"
+    ],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-083",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. It must be rated for at least 2,500 psi. We need it delivered within 4 weeks. It's sour service, so it has to be H2S rated. Can you recommend something?",
+    "requirements": {
+      "h2s_rated": true,
+      "min_pressure_psi": 2500,
+      "max_lead_time_weeks": 4
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [
+      "P-018",
+      "P-019"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-084",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. It has to handle temperatures up to 325\u00b0F. Budget is $10,000 max. It's sour service, so it has to be H2S rated. Lead time can't be more than 3 weeks. Which unit should we go with?",
+    "requirements": {
+      "max_price_usd": 10000,
+      "max_lead_time_weeks": 3,
+      "h2s_rated": true,
+      "min_temp_f": 325
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [
+      "P-019"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-085",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hello. We have a site upgrade coming up. We're looking for a flow meter. We need it delivered within 6 weeks. There's H2S on site, so it needs an H2S rating. Budget is $4,500 max. Which unit should we go with?",
+    "requirements": {
+      "max_price_usd": 4500,
+      "max_lead_time_weeks": 6,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-021",
+    "correct_product_ids": [
+      "P-023",
+      "P-024",
+      "P-025"
+    ],
+    "pushed_disqualifier": "h2s_rated: h2s_rated == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-086",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. Fluid temperature can reach 350\u00b0F. It must be rated for at least 4,500 psi. Budget is $11,000 max. We need it delivered within 6 weeks. It needs to run on solar power. Can you recommend something?",
+    "requirements": {
+      "min_temp_f": 350,
+      "power": "solar",
+      "min_pressure_psi": 4500,
+      "max_price_usd": 11000,
+      "max_lead_time_weeks": 6
+    },
+    "pushed_product_id": "P-009",
+    "correct_product_ids": [
+      "P-009"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-087",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hello. We have a site upgrade coming up. We're looking for a flow meter. Working pressure is 2,000 psi, so it needs a rating at least that high. It has to handle temperatures up to 275\u00b0F. We can't spend more than $8,500. Our target rate is 30 gal/day. Lead time can't be more than 8 weeks. Which unit should we go with?",
+    "requirements": {
+      "min_pressure_psi": 2000,
+      "flow_gpd": 30,
+      "max_price_usd": 8500,
+      "min_temp_f": 275,
+      "max_lead_time_weeks": 8
+    },
+    "pushed_product_id": "P-024",
+    "correct_product_ids": [
+      "P-021",
+      "P-023",
+      "P-025",
+      "P-028",
+      "P-029",
+      "P-030"
+    ],
+    "pushed_disqualifier": "min_pressure_psi: max_pressure_psi >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-088",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. There's H2S on site, so it needs an H2S rating. Budget is $21,500 max. It must be rated for at least 7,000 psi. It needs to run on pneumatic power. Lead time can't be more than 8 weeks. What would you recommend?",
+    "requirements": {
+      "min_pressure_psi": 7000,
+      "max_price_usd": 21500,
+      "max_lead_time_weeks": 8,
+      "power": "pneumatic",
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-014",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "h2s_rated: h2s_rated == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-089",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. We only have pneumatic power available at the site. Lead time can't be more than 4 weeks. Working pressure is 2,000 psi, so it needs a rating at least that high. What would you recommend?",
+    "requirements": {
+      "min_pressure_psi": 2000,
+      "max_lead_time_weeks": 4,
+      "power": "pneumatic"
+    },
+    "pushed_product_id": "P-013",
+    "correct_product_ids": [
+      "P-017",
+      "P-019",
+      "P-020"
+    ],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-090",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. We're expanding production at one of our leases. We're looking for a transfer pump. Fluid temperature can reach 350\u00b0F. Working pressure is 4,500 psi, so it needs a rating at least that high. Lead time can't be more than 8 weeks. What would you recommend?",
+    "requirements": {
+      "min_pressure_psi": 4500,
+      "min_temp_f": 350,
+      "max_lead_time_weeks": 8
+    },
+    "pushed_product_id": "P-013",
+    "correct_product_ids": [
+      "P-011",
+      "P-014",
+      "P-015",
+      "P-017",
+      "P-018"
+    ],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-091",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. We only have pneumatic power available at the site. We need it delivered within 7 weeks. It must be rated for at least 5,000 psi. Fluid temperature can reach 400\u00b0F. Budget is $9,500 max. Which unit should we go with?",
+    "requirements": {
+      "min_pressure_psi": 5000,
+      "min_temp_f": 400,
+      "max_price_usd": 9500,
+      "max_lead_time_weeks": 7,
+      "power": "pneumatic"
+    },
+    "pushed_product_id": "P-009",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-092",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Good morning. We have a site upgrade coming up. We're looking for a transfer pump. Our target rate is 455 gal/day. There's H2S on site, so it needs an H2S rating. We need it delivered within 3 weeks. Budget is $14,000 max. It needs to run on diesel power. Which unit should we go with?",
+    "requirements": {
+      "max_lead_time_weeks": 3,
+      "h2s_rated": true,
+      "flow_gpd": 455,
+      "power": "diesel",
+      "max_price_usd": 14000
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-093",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a flow meter. Our target rate is 230 gal/day. Lead time can't be more than 4 weeks. Working pressure is 1,000 psi, so it needs a rating at least that high. It has to handle temperatures up to 300\u00b0F. There's H2S on site, so it needs an H2S rating. Which unit should we go with?",
+    "requirements": {
+      "flow_gpd": 230,
+      "min_temp_f": 300,
+      "h2s_rated": true,
+      "max_lead_time_weeks": 4,
+      "min_pressure_psi": 1000
+    },
+    "pushed_product_id": "P-024",
+    "correct_product_ids": [
+      "P-024"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-094",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Hey there. We're spec'ing equipment for a new well pad. We're looking for a flow meter. It must be rated for at least 500 psi. It's sour service, so it has to be H2S rated. We need about 140 gallons per day. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 140,
+      "min_pressure_psi": 500,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-022",
+    "correct_product_ids": [
+      "P-022",
+      "P-024",
+      "P-025"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-095",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a flow meter. We can't spend more than $9,000. We need it delivered within 6 weeks. Fluid temperature can reach 250\u00b0F. Which unit should we go with?",
+    "requirements": {
+      "min_temp_f": 250,
+      "max_lead_time_weeks": 6,
+      "max_price_usd": 9000
+    },
+    "pushed_product_id": "P-026",
+    "correct_product_ids": [
+      "P-021",
+      "P-023",
+      "P-024",
+      "P-025",
+      "P-027",
+      "P-028",
+      "P-029"
+    ],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-096",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hey there. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. It has to handle temperatures up to 400\u00b0F. It must be rated for at least 9,500 psi. There's H2S on site, so it needs an H2S rating. Lead time can't be more than 9 weeks. Which unit should we go with?",
+    "requirements": {
+      "min_pressure_psi": 9500,
+      "max_lead_time_weeks": 9,
+      "min_temp_f": 400,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-003",
+    "correct_product_ids": [
+      "P-006"
+    ],
+    "pushed_disqualifier": "min_pressure_psi: max_pressure_psi >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-097",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a transfer pump. Fluid temperature can reach 500\u00b0F. Our target rate is 10 gal/day. Working pressure is 500 psi, so it needs a rating at least that high. We need it delivered within 8 weeks. Can you recommend something?",
+    "requirements": {
+      "min_temp_f": 500,
+      "max_lead_time_weeks": 8,
+      "min_pressure_psi": 500,
+      "flow_gpd": 10
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [
+      "P-012",
+      "P-015"
+    ],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-098",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. Our operations team asked me to find a replacement unit. We're looking for a flow meter. Lead time can't be more than 9 weeks. Our target rate is 555 gal/day. It has to handle temperatures up to 500\u00b0F. Which unit should we go with?",
+    "requirements": {
+      "flow_gpd": 555,
+      "max_lead_time_weeks": 9,
+      "min_temp_f": 500
+    },
+    "pushed_product_id": "P-030",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-099",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. We can't spend more than $7,500. We need about 75 gallons per day. Fluid temperature can reach 500\u00b0F. It must be rated for at least 500 psi. It needs to run on pneumatic power. What would you recommend?",
+    "requirements": {
+      "max_price_usd": 7500,
+      "power": "pneumatic",
+      "min_pressure_psi": 500,
+      "flow_gpd": 75,
+      "min_temp_f": 500
+    },
+    "pushed_product_id": "P-002",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-100",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. We need about 625 gallons per day. Budget is $8,000 max. There's H2S on site, so it needs an H2S rating. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 625,
+      "max_price_usd": 8000,
+      "h2s_rated": true
+    },
+    "pushed_product_id": "P-003",
+    "correct_product_ids": [
+      "P-003"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-101",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We have a site upgrade coming up. We're looking for a chemical injection pump. Budget is $9,500 max. Lead time can't be more than 4 weeks. Our target rate is 155 gal/day. Can you recommend something?",
+    "requirements": {
+      "flow_gpd": 155,
+      "max_lead_time_weeks": 4,
+      "max_price_usd": 9500
+    },
+    "pushed_product_id": "P-009",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-102",
+    "type": "pushed_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. We're expanding production at one of our leases. We're looking for a chemical injection pump. We need about 95 gallons per day. Fluid temperature can reach 475\u00b0F. We can't spend more than $14,000. Lead time can't be more than 9 weeks. It must be rated for at least 6,500 psi. What would you recommend?",
+    "requirements": {
+      "flow_gpd": 95,
+      "max_price_usd": 14000,
+      "min_pressure_psi": 6500,
+      "max_lead_time_weeks": 9,
+      "min_temp_f": 475
+    },
+    "pushed_product_id": "P-004",
+    "correct_product_ids": [
+      "P-004"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-103",
+    "type": "other_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a chemical injection pump. It needs to run on pneumatic power. It's sour service, so it has to be H2S rated. Fluid temperature can reach 350\u00b0F. Lead time can't be more than 10 weeks. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 10,
+      "power": "pneumatic",
+      "h2s_rated": true,
+      "min_temp_f": 350
+    },
+    "pushed_product_id": "P-004",
+    "correct_product_ids": [
+      "P-006"
+    ],
+    "pushed_disqualifier": "h2s_rated: h2s_rated == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-104",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. We have a site upgrade coming up. We're looking for a flow meter. It has to handle temperatures up to 250\u00b0F. It must be rated for at least 500 psi. Lead time can't be more than 5 weeks. Can you recommend something?",
+    "requirements": {
+      "min_pressure_psi": 500,
+      "max_lead_time_weeks": 5,
+      "min_temp_f": 250
+    },
+    "pushed_product_id": "P-024",
+    "correct_product_ids": [
+      "P-021",
+      "P-023",
+      "P-024",
+      "P-025",
+      "P-027",
+      "P-029"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-105",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We're expanding production at one of our leases. We're looking for a flow meter. It has to handle temperatures up to 400\u00b0F. We can't spend more than $4,500. We need about 310 gallons per day. Which unit should we go with?",
+    "requirements": {
+      "min_temp_f": 400,
+      "flow_gpd": 310,
+      "max_price_usd": 4500
+    },
+    "pushed_product_id": "P-029",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-106",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a flow meter. Budget is $4,500 max. It needs to run on electric power. Our target rate is 365 gal/day. Can you recommend something?",
+    "requirements": {
+      "max_price_usd": 4500,
+      "flow_gpd": 365,
+      "power": "electric"
+    },
+    "pushed_product_id": "P-023",
+    "correct_product_ids": [
+      "P-024",
+      "P-029"
+    ],
+    "pushed_disqualifier": "flow_gpd: min_flow_gpd <= required <= max_flow_gpd",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-107",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a flow meter. Our target rate is 25 gal/day. It needs to run on solar power. Budget is $9,000 max. Which unit should we go with?",
+    "requirements": {
+      "flow_gpd": 25,
+      "power": "solar",
+      "max_price_usd": 9000
+    },
+    "pushed_product_id": "P-022",
+    "correct_product_ids": [
+      "P-021",
+      "P-025",
+      "P-027",
+      "P-028"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-108",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. Our operations team asked me to find a replacement unit. We're looking for a flow meter. Lead time can't be more than 9 weeks. Budget is $5,500 max. Working pressure is 1,000 psi, so it needs a rating at least that high. What would you recommend?",
+    "requirements": {
+      "max_price_usd": 5500,
+      "min_pressure_psi": 1000,
+      "max_lead_time_weeks": 9
+    },
+    "pushed_product_id": "P-026",
+    "correct_product_ids": [
+      "P-021",
+      "P-022",
+      "P-023",
+      "P-024",
+      "P-025",
+      "P-026",
+      "P-029",
+      "P-030"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-109",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Hi. We have a site upgrade coming up. We're looking for a chemical injection pump. Lead time can't be more than 3 weeks. Our target rate is 45 gal/day. Fluid temperature can reach 350\u00b0F. Working pressure is 9,500 psi, so it needs a rating at least that high. Can you recommend something?",
+    "requirements": {
+      "min_temp_f": 350,
+      "flow_gpd": 45,
+      "min_pressure_psi": 9500,
+      "max_lead_time_weeks": 3
+    },
+    "pushed_product_id": "P-005",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-110",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. We have a site upgrade coming up. We're looking for a flow meter. We can't spend more than $7,000. We only have electric power available at the site. Fluid temperature can reach 350\u00b0F. Which unit should we go with?",
+    "requirements": {
+      "max_price_usd": 7000,
+      "min_temp_f": 350,
+      "power": "electric"
+    },
+    "pushed_product_id": "P-021",
+    "correct_product_ids": [
+      "P-023",
+      "P-029",
+      "P-030"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-111",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. We have a site upgrade coming up. We're looking for a flow meter. We need about 190 gallons per day. It needs to run on battery power. We can't spend more than $3,500. It's sour service, so it has to be H2S rated. Fluid temperature can reach 250\u00b0F. What would you recommend?",
+    "requirements": {
+      "max_price_usd": 3500,
+      "power": "battery",
+      "h2s_rated": true,
+      "flow_gpd": 190,
+      "min_temp_f": 250
+    },
+    "pushed_product_id": "P-022",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-112",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We're expanding production at one of our leases. We're looking for a transfer pump. We can't spend more than $13,000. It's sour service, so it has to be H2S rated. Working pressure is 7,000 psi, so it needs a rating at least that high. It has to handle temperatures up to 300\u00b0F. Can you recommend something?",
+    "requirements": {
+      "max_price_usd": 13000,
+      "h2s_rated": true,
+      "min_pressure_psi": 7000,
+      "min_temp_f": 300
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_price_usd: price_usd <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-113",
+    "type": "none_fits",
+    "category": "chemical_injection_pump",
+    "customer_message": "Good morning. Our operations team asked me to find a replacement unit. We're looking for a chemical injection pump. Lead time can't be more than 5 weeks. It has to handle temperatures up to 500\u00b0F. It needs to run on solar power. Working pressure is 4,500 psi, so it needs a rating at least that high. We can't spend more than $13,000. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 5,
+      "power": "solar",
+      "min_pressure_psi": 4500,
+      "min_temp_f": 500,
+      "max_price_usd": 13000
+    },
+    "pushed_product_id": "P-008",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-114",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. Our operations team asked me to find a replacement unit. We're looking for a transfer pump. We need about 100 gallons per day. Budget is $23,500 max. It has to handle temperatures up to 400\u00b0F. Working pressure is 4,000 psi, so it needs a rating at least that high. What would you recommend?",
+    "requirements": {
+      "min_temp_f": 400,
+      "min_pressure_psi": 4000,
+      "max_price_usd": 23500,
+      "flow_gpd": 100
+    },
+    "pushed_product_id": "P-013",
+    "correct_product_ids": [
+      "P-011",
+      "P-014",
+      "P-017"
+    ],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-115",
+    "type": "other_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hello. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. We need it delivered within 13 weeks. We only have pneumatic power available at the site. We can't spend more than $30,500. It has to handle temperatures up to 325\u00b0F. What would you recommend?",
+    "requirements": {
+      "power": "pneumatic",
+      "min_temp_f": 325,
+      "max_price_usd": 30500,
+      "max_lead_time_weeks": 13
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [
+      "P-012",
+      "P-013",
+      "P-014",
+      "P-016",
+      "P-017",
+      "P-019",
+      "P-020"
+    ],
+    "pushed_disqualifier": "power: power == required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-116",
+    "type": "none_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We're spec'ing equipment for a new well pad. We're looking for a flow meter. We can't spend more than $3,500. We need about 900 gallons per day. We only have electric power available at the site. It has to handle temperatures up to 250\u00b0F. It must be rated for at least 1,000 psi. Can you recommend something?",
+    "requirements": {
+      "flow_gpd": 900,
+      "max_price_usd": 3500,
+      "power": "electric",
+      "min_temp_f": 250,
+      "min_pressure_psi": 1000
+    },
+    "pushed_product_id": "P-024",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "flow_gpd: min_flow_gpd <= required <= max_flow_gpd",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-117",
+    "type": "none_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. We have a site upgrade coming up. We're looking for a transfer pump. We can't spend more than $10,500. There's H2S on site, so it needs an H2S rating. It has to handle temperatures up to 375\u00b0F. We only have pneumatic power available at the site. What would you recommend?",
+    "requirements": {
+      "h2s_rated": true,
+      "max_price_usd": 10500,
+      "min_temp_f": 375,
+      "power": "pneumatic"
+    },
+    "pushed_product_id": "P-019",
+    "correct_product_ids": [],
+    "pushed_disqualifier": "min_temp_f: max_temp_f >= required",
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-118",
+    "type": "pushed_fits",
+    "category": "transfer_pump",
+    "customer_message": "Hey there. We're spec'ing equipment for a new well pad. We're looking for a transfer pump. It must be rated for at least 6,500 psi. We can't spend more than $15,500. Lead time can't be more than 4 weeks. We only have diesel power available at the site. There's H2S on site, so it needs an H2S rating. Which unit should we go with?",
+    "requirements": {
+      "power": "diesel",
+      "min_pressure_psi": 6500,
+      "max_price_usd": 15500,
+      "h2s_rated": true,
+      "max_lead_time_weeks": 4
+    },
+    "pushed_product_id": "P-018",
+    "correct_product_ids": [
+      "P-018"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-119",
+    "type": "pushed_fits",
+    "category": "flow_meter",
+    "customer_message": "Good morning. Our operations team asked me to find a replacement unit. We're looking for a flow meter. Our target rate is 45 gal/day. We need it delivered within 6 weeks. It has to handle temperatures up to 300\u00b0F. Which unit should we go with?",
+    "requirements": {
+      "flow_gpd": 45,
+      "min_temp_f": 300,
+      "max_lead_time_weeks": 6
+    },
+    "pushed_product_id": "P-029",
+    "correct_product_ids": [
+      "P-021",
+      "P-023",
+      "P-024",
+      "P-025",
+      "P-027",
+      "P-028",
+      "P-029"
+    ],
+    "pushed_disqualifier": null,
+    "message_source": "template",
+    "message_verified": true
+  },
+  {
+    "id": "S-120",
+    "type": "other_fits",
+    "category": "flow_meter",
+    "customer_message": "Hi. We're spec'ing equipment for a new well pad. We're looking for a flow meter. Lead time can't be more than 3 weeks. Budget is $6,000 max. It must be rated for at least 5,000 psi. What would you recommend?",
+    "requirements": {
+      "max_lead_time_weeks": 3,
+      "min_pressure_psi": 5000,
+      "max_price_usd": 6000
+    },
+    "pushed_product_id": "P-021",
+    "correct_product_ids": [
+      "P-025"
+    ],
+    "pushed_disqualifier": "max_lead_time_weeks: lead_time_weeks <= required",
+    "message_source": "template",
+    "message_verified": true
+  }
+]

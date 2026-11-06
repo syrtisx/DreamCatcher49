@@ -1,0 +1,40 @@
+# Pin everything that affects results. Change only before the full run,
+# and log any change in DESIGN.md's changelog.
+agent_models:
+  - claude-haiku-5-5
+  - claude-sonnet-5-5
+judge_model: claude-opus-5-5   # different from both agent models
+temperature: null              # null = API default (omit the parameter)
+reps: 3
+concurrency: 5                 # raise only if your rate-limit tier allows
+max_tokens: 16000
+max_tool_turns: 15
+judge_max_tokens: 16000
+seed: 49
+
+# Extended thinking is OFF by design for both agents, sent explicitly because it is on
+# by default. Each model needs its own value: a 2026-11-06 probe got a 400 for Sonnet 5.5
+# with "disabled" and for Haiku 5.5 with "between_tools". With "between_tools" Sonnet can
+# still return short progress notes between tool calls; they stay in saved transcripts
+# but never reach the judge or the hand labeler. A model missing from these maps errors
+# before it is called.
+agent_thinking:
+  claude-haiku-5-5: {type: disabled}
+  claude-sonnet-5-5: {type: between_tools}
+
+# Agent effort is pinned at each model's current default so it cannot shift.
+agent_effort:
+  claude-haiku-5-5: medium
+  claude-sonnet-5-5: high
+
+# Judge thinking is pinned ON. The API has no thinking token budget for this model.
+# Its two controls are judge_max_tokens (hard cap on thinking + reply) and judge_effort
+# (soft guidance, pinned at the current default so it cannot shift).
+judge_thinking: {type: adaptive}
+judge_effort: medium
+
+paths:
+  catalog: data/catalog.json
+  scenarios: data/scenarios.json
+  conditions: data/conditions.json
+  raw_dir: results/raw

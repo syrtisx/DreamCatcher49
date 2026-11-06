@@ -1,0 +1,452 @@
+[
+  {
+    "id": "P-001",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-523",
+    "specs": {
+      "max_temp_f": 250,
+      "max_pressure_psi": 5000,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 200,
+      "h2s_rated": false,
+      "power": "pneumatic"
+    },
+    "price_usd": 15700,
+    "lead_time_weeks": 2
+  },
+  {
+    "id": "P-002",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-565",
+    "specs": {
+      "max_temp_f": 500,
+      "max_pressure_psi": 1500,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 100,
+      "h2s_rated": false,
+      "power": "pneumatic"
+    },
+    "price_usd": 8600,
+    "lead_time_weeks": 12
+  },
+  {
+    "id": "P-003",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-480",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 1500,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 800,
+      "h2s_rated": true,
+      "power": "solar"
+    },
+    "price_usd": 7100,
+    "lead_time_weeks": 8
+  },
+  {
+    "id": "P-004",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-374",
+    "specs": {
+      "max_temp_f": 500,
+      "max_pressure_psi": 7500,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 200,
+      "h2s_rated": false,
+      "power": "pneumatic"
+    },
+    "price_usd": 13400,
+    "lead_time_weeks": 8
+  },
+  {
+    "id": "P-005",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-676",
+    "specs": {
+      "max_temp_f": 350,
+      "max_pressure_psi": 10000,
+      "min_flow_gpd": 5,
+      "max_flow_gpd": 50,
+      "h2s_rated": false,
+      "power": "electric"
+    },
+    "price_usd": 7600,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-006",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-696",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 10000,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 200,
+      "h2s_rated": true,
+      "power": "pneumatic"
+    },
+    "price_usd": 12000,
+    "lead_time_weeks": 8
+  },
+  {
+    "id": "P-007",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-122",
+    "specs": {
+      "max_temp_f": 450,
+      "max_pressure_psi": 3000,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 800,
+      "h2s_rated": true,
+      "power": "solar"
+    },
+    "price_usd": 16200,
+    "lead_time_weeks": 6
+  },
+  {
+    "id": "P-008",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-809",
+    "specs": {
+      "max_temp_f": 500,
+      "max_pressure_psi": 5000,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 50,
+      "h2s_rated": false,
+      "power": "solar"
+    },
+    "price_usd": 11200,
+    "lead_time_weeks": 6
+  },
+  {
+    "id": "P-009",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-297",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 5000,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 400,
+      "h2s_rated": false,
+      "power": "solar"
+    },
+    "price_usd": 9100,
+    "lead_time_weeks": 6
+  },
+  {
+    "id": "P-010",
+    "category": "chemical_injection_pump",
+    "name": "Norvane CIP-832",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 7500,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 50,
+      "h2s_rated": false,
+      "power": "pneumatic"
+    },
+    "price_usd": 7100,
+    "lead_time_weeks": 12
+  },
+  {
+    "id": "P-011",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-349",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 5000,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 100,
+      "h2s_rated": false,
+      "power": "electric"
+    },
+    "price_usd": 23000,
+    "lead_time_weeks": 6
+  },
+  {
+    "id": "P-012",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-728",
+    "specs": {
+      "max_temp_f": 500,
+      "max_pressure_psi": 1500,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 50,
+      "h2s_rated": true,
+      "power": "pneumatic"
+    },
+    "price_usd": 24900,
+    "lead_time_weeks": 8
+  },
+  {
+    "id": "P-013",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-897",
+    "specs": {
+      "max_temp_f": 350,
+      "max_pressure_psi": 10000,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 200,
+      "h2s_rated": false,
+      "power": "pneumatic"
+    },
+    "price_usd": 23000,
+    "lead_time_weeks": 12
+  },
+  {
+    "id": "P-014",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-232",
+    "specs": {
+      "max_temp_f": 500,
+      "max_pressure_psi": 7500,
+      "min_flow_gpd": 25,
+      "max_flow_gpd": 800,
+      "h2s_rated": false,
+      "power": "pneumatic"
+    },
+    "price_usd": 19700,
+    "lead_time_weeks": 6
+  },
+  {
+    "id": "P-015",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-840",
+    "specs": {
+      "max_temp_f": 500,
+      "max_pressure_psi": 10000,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 400,
+      "h2s_rated": false,
+      "power": "diesel"
+    },
+    "price_usd": 24300,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-016",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-134",
+    "specs": {
+      "max_temp_f": 350,
+      "max_pressure_psi": 1500,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 100,
+      "h2s_rated": true,
+      "power": "pneumatic"
+    },
+    "price_usd": 29700,
+    "lead_time_weeks": 12
+  },
+  {
+    "id": "P-017",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-805",
+    "specs": {
+      "max_temp_f": 450,
+      "max_pressure_psi": 5000,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 400,
+      "h2s_rated": false,
+      "power": "pneumatic"
+    },
+    "price_usd": 13600,
+    "lead_time_weeks": 2
+  },
+  {
+    "id": "P-018",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-256",
+    "specs": {
+      "max_temp_f": 350,
+      "max_pressure_psi": 7500,
+      "min_flow_gpd": 25,
+      "max_flow_gpd": 800,
+      "h2s_rated": true,
+      "power": "diesel"
+    },
+    "price_usd": 13700,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-019",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-419",
+    "specs": {
+      "max_temp_f": 350,
+      "max_pressure_psi": 3000,
+      "min_flow_gpd": 5,
+      "max_flow_gpd": 800,
+      "h2s_rated": true,
+      "power": "pneumatic"
+    },
+    "price_usd": 9900,
+    "lead_time_weeks": 2
+  },
+  {
+    "id": "P-020",
+    "category": "transfer_pump",
+    "name": "Norvane TXP-619",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 3000,
+      "min_flow_gpd": 1,
+      "max_flow_gpd": 50,
+      "h2s_rated": false,
+      "power": "pneumatic"
+    },
+    "price_usd": 28700,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-021",
+    "category": "flow_meter",
+    "name": "Norvane FM-756",
+    "specs": {
+      "max_temp_f": 350,
+      "max_pressure_psi": 5000,
+      "min_flow_gpd": 25,
+      "max_flow_gpd": 400,
+      "h2s_rated": false,
+      "power": "solar"
+    },
+    "price_usd": 4500,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-022",
+    "category": "flow_meter",
+    "name": "Norvane FM-333",
+    "specs": {
+      "max_temp_f": 250,
+      "max_pressure_psi": 1500,
+      "min_flow_gpd": 5,
+      "max_flow_gpd": 200,
+      "h2s_rated": true,
+      "power": "electric"
+    },
+    "price_usd": 3100,
+    "lead_time_weeks": 8
+  },
+  {
+    "id": "P-023",
+    "category": "flow_meter",
+    "name": "Norvane FM-977",
+    "specs": {
+      "max_temp_f": 500,
+      "max_pressure_psi": 3000,
+      "min_flow_gpd": 5,
+      "max_flow_gpd": 50,
+      "h2s_rated": true,
+      "power": "electric"
+    },
+    "price_usd": 3000,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-024",
+    "category": "flow_meter",
+    "name": "Norvane FM-205",
+    "specs": {
+      "max_temp_f": 300,
+      "max_pressure_psi": 1500,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 800,
+      "h2s_rated": true,
+      "power": "electric"
+    },
+    "price_usd": 3100,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-025",
+    "category": "flow_meter",
+    "name": "Norvane FM-609",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 5000,
+      "min_flow_gpd": 5,
+      "max_flow_gpd": 200,
+      "h2s_rated": true,
+      "power": "solar"
+    },
+    "price_usd": 4500,
+    "lead_time_weeks": 2
+  },
+  {
+    "id": "P-026",
+    "category": "flow_meter",
+    "name": "Norvane FM-399",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 1500,
+      "min_flow_gpd": 5,
+      "max_flow_gpd": 400,
+      "h2s_rated": false,
+      "power": "battery"
+    },
+    "price_usd": 5500,
+    "lead_time_weeks": 8
+  },
+  {
+    "id": "P-027",
+    "category": "flow_meter",
+    "name": "Norvane FM-834",
+    "specs": {
+      "max_temp_f": 500,
+      "max_pressure_psi": 1500,
+      "min_flow_gpd": 5,
+      "max_flow_gpd": 50,
+      "h2s_rated": false,
+      "power": "solar"
+    },
+    "price_usd": 7400,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-028",
+    "category": "flow_meter",
+    "name": "Norvane FM-694",
+    "specs": {
+      "max_temp_f": 300,
+      "max_pressure_psi": 3000,
+      "min_flow_gpd": 25,
+      "max_flow_gpd": 50,
+      "h2s_rated": false,
+      "power": "solar"
+    },
+    "price_usd": 8500,
+    "lead_time_weeks": 6
+  },
+  {
+    "id": "P-029",
+    "category": "flow_meter",
+    "name": "Norvane FM-144",
+    "specs": {
+      "max_temp_f": 350,
+      "max_pressure_psi": 3000,
+      "min_flow_gpd": 10,
+      "max_flow_gpd": 400,
+      "h2s_rated": false,
+      "power": "electric"
+    },
+    "price_usd": 4500,
+    "lead_time_weeks": 4
+  },
+  {
+    "id": "P-030",
+    "category": "flow_meter",
+    "name": "Norvane FM-117",
+    "specs": {
+      "max_temp_f": 400,
+      "max_pressure_psi": 3000,
+      "min_flow_gpd": 25,
+      "max_flow_gpd": 800,
+      "h2s_rated": false,
+      "power": "electric"
+    },
+    "price_usd": 5400,
+    "lead_time_weeks": 8
+  }
+]
