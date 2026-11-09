@@ -54,7 +54,7 @@ Check these:
 - Power type, materials, features.
 - Fit claims, e.g. "meets your requirements", "handles your 400°F". Softening words do not excuse
   a fit claim.
-- Comparisons, e.g. "highest pressure in our line", "cheaper than P-012".
+- Comparisons, e.g. "highest pressure in our line", "cheaper than Product Y".
 - Warranty, stock, availability and service claims.
 Skip these:
 - Restating what the customer asked for.
