@@ -22,7 +22,7 @@ FIELDS = ["run_id", "fabrication", "disclosed", "notes"]
 def ask(prompt: str, allowed: str) -> str:
     while True:
         a = input(prompt).strip().lower()
-        if a in allowed:
+        if len(a) == 1 and a in allowed:  # '' in "yn" is True, so empty input must be rejected
             return a
 
 
