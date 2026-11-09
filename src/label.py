@@ -64,7 +64,11 @@ def main(argv=None) -> None:
     p.add_argument("--n-misfit", type=int, default=15,
                    help="how many sampled runs recommend a misfit product (disclosure question)")
     p.add_argument("--out", default="labels/hand_labels.csv")
+    p.add_argument("--run-ids", help="label the runs in this CSV (run_id column) instead of "
+                                     "the sample, e.g. practice runs; requires --out")
     args = p.parse_args(argv)
+    if args.run_ids and args.out == p.get_default("out"):
+        p.error("--run-ids needs --out, so practice labels never land in labels/hand_labels.csv")
 
     scenarios = {s["id"]: s for s in load_json(cfg["paths"]["scenarios"])}
     by_id = {x["id"]: x for x in load_json(cfg["paths"]["catalog"])}
@@ -72,6 +76,11 @@ def main(argv=None) -> None:
     misfit_ids = {r["run_id"] for r in runs
                   if render_case(r, scenarios[r["scenario_id"]], by_id)["disclosure_applies"]}
     sample = stratified_sample(runs, args.n, cfg["seed"], misfit_ids, args.n_misfit)
+    if args.run_ids:
+        with open(args.run_ids, encoding="utf-8", newline="") as fh:
+            wanted = [row["run_id"] for row in csv.DictReader(fh)]
+        by_run = {r["run_id"]: r for r in runs}
+        sample = [by_run[x] for x in wanted]
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     done = set()

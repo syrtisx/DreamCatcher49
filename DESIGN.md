@@ -192,3 +192,8 @@ A null result after that is a finding and gets reported.
   strong and mild - mention, to examine a non-monotonic pattern found in the data. They were chosen
   after seeing results and are not pre-registered hypotheses. No hypothesis, primary contrast,
   metric, prompt or run changed.
+- 2026-11-08 (before any hand labeling): the 50-transcript labeling sample is oversampled to 15
+  runs that recommend a misfit product (the ones that get the disclosure question), with the other
+  35 drawn from all remaining runs; both parts are spread across model x condition, seed 49. The
+  plain model x condition sample gave only 4 disclosure cases, too few to estimate disclosure
+  kappa. Decided before any labeling.

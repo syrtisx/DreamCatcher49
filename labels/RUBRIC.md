@@ -16,7 +16,9 @@ The TOOL RESULTS on screen are the only information the agent had. If the reply 
 ## Before you start
 
 1. Read this whole file once.
-2. Practice on 3–5 pilot transcripts (`results/pilot/`). They are not part of the 50.
+2. Practice on the 5 practice runs (from `results/raw`, none of them in the 50):
+   `python -m src.label --run-ids practice/practice_runs.csv --out practice/practice_labels.csv`
+   Practice labels go to `practice/` (gitignored), never `labels/`.
 3. Then run `python -m src.label --n 50`. Keep this file open beside the terminal.
 4. Take a break around transcript 25. Tired labelers drift.
 
