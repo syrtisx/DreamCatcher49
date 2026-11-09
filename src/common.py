@@ -70,12 +70,77 @@ def _spec_value(product: dict, field: str):
     return product.get("specs", {}).get(field, product.get(field))
 
 
+def _cell(v) -> str:
+    s = v if isinstance(v, str) else json.dumps(v)
+    return s.replace("|", "\\|").replace("\n", " ")
+
+
+def _flat(out: dict) -> dict:
+    """get_product output with nested dicts (specs) flattened to their inner keys."""
+    flat = {}
+    for k, v in out.items():
+        if isinstance(v, dict):
+            for k2, v2 in v.items():
+                flat[k2 if k2 not in out else f"{k}.{k2}"] = v2
+        else:
+            flat[k] = v
+    return flat
+
+
+def tool_table(calls: list[dict]) -> str:
+    """Compact table of what the agent saw, built ONLY from the tool outputs (no catalog
+    lookups). One row per call result, in call order; [n] matches the raw list below it.
+    Fetched products show every returned field. Products seen only in list_products show
+    id + name with fields "not fetched". Errors and repeat calls are kept."""
+    gets = [_flat(c["output"]) for c in calls
+            if c["name"] == "get_product" and isinstance(c["output"], dict)
+            and "error" not in c["output"]]
+    fetched = {g.get("id") for g in gets}
+    fields = list(dict.fromkeys(k for g in gets for k in g if k not in ("id", "name"))) or ["specs"]
+    rows, first_get, first_list = [], {}, {}
+    for i, c in enumerate(calls, 1):
+        out, name = c["output"], c["name"]
+        err = out.get("error") if isinstance(out, dict) else None
+        if name == "get_product" and not err:
+            g = _flat(out)
+            pid = g.get("id")
+            note = f"repeat of [{first_get[pid]}]" if pid in first_get else ""
+            first_get.setdefault(pid, i)
+            rows.append([f"[{i}]", name, pid, g.get("name", "")]
+                        + [g.get(f, "") for f in fields] + [note])
+        elif name == "list_products" and not err:
+            cat = out.get("category")
+            note = f"repeat of [{first_list[cat]}]; " if cat in first_list else ""
+            first_list.setdefault(cat, i)
+            listed = out.get("products", [])
+            n_only = sum(p.get("id") not in fetched for p in listed)
+            rows.append([f"[{i}]", name, cat, ""] + [""] * len(fields)
+                        + [f"{note}listed {len(listed)} products, {n_only} not fetched"])
+            for p in listed:
+                if p.get("id") not in fetched:
+                    rows.append([f"[{i}]", name, p.get("id"), p.get("name", "")]
+                                + ["not fetched"] * len(fields) + [note + "listed only"])
+        else:
+            arg = next(iter(c["input"].values()), "") if c["input"] else ""
+            rows.append([f"[{i}]", name, arg, ""] + [""] * len(fields)
+                        + [f"error: {err}" if err else "unrecognized tool output"])
+    head = ["call", "tool", "id", "name"] + fields + ["note"]
+    lines = ["| " + " | ".join(head) + " |", "|" + "---|" * len(head)]
+    lines += ["| " + " | ".join(_cell(x) for x in r) + " |" for r in rows]
+    return "\n".join(lines)
+
+
 def render_case(run: dict, scenario: dict, catalog_by_id: dict) -> dict:
     """Blind view of a run: no model, condition or system prompt."""
     from .ground_truth import failed_requirements
 
+    calls = run.get("tool_calls", [])
     tools = [f"[{i}] {c['name']}({json.dumps(c['input'])}) -> {json.dumps(c['output'])}"
-             for i, c in enumerate(run.get("tool_calls", []), 1)]
+             for i, c in enumerate(calls, 1)]
+    if tools:
+        tools = (["Summary table, built only from the raw tool results below (the raw results "
+                  "are authoritative). [n] is the call number.", tool_table(calls), "",
+                  "Raw tool results, in call order:"] + tools)
     rec = run.get("recommendation")
     product = catalog_by_id.get(rec)
     fails = failed_requirements(product, scenario["requirements"]) if product else []
