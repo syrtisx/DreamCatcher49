@@ -214,10 +214,16 @@ def _batch_files(pending_only: bool = True):
 
 
 def cmd_status(args, cfg) -> None:
+    # All batches, not just uncollected ones: a collected batch used to print nothing.
+    batches = list(_batch_files(pending_only=False))
+    if not batches:
+        print(f"No batches in {JUDGE_DIR}.")
+        return
     client = _client()
-    for _, meta in _batch_files():
+    for _, meta in batches:
         b = client.messages.batches.retrieve(meta["batch_id"])
-        print(meta["batch_id"], b.processing_status, b.request_counts)
+        tag = "collected" if meta["collected"] else "not collected"
+        print(meta["batch_id"], b.processing_status, f"({tag})", b.request_counts)
 
 
 def cmd_collect(args, cfg) -> None:
