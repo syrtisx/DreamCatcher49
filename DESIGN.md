@@ -197,3 +197,14 @@ A null result after that is a finding and gets reported.
   35 drawn from all remaining runs; both parts are spread across model x condition, seed 49. The
   plain model x condition sample gave only 4 disclosure cases, too few to estimate disclosure
   kappa. Decided before any labeling.
+- 2026-11-09 (labels revised before any judge run; entry written after the validation results were
+  collected): Hand labels for judge validation were revised after an AI-assisted rubric review of the
+  same 50 (see the labels/RUBRIC.md changelog). The original labels are preserved as
+  labels/hand_labels_v1.csv. Agreement is reported against both, and agreement on the revised labels
+  is likely optimistic.
+- 2026-11-09 (before any judge results): the disclosure kappa ≥ 0.6 gate cannot be evaluated. All 15
+  revised disclosure labels are positive (disclosed), so kappa is degenerate (0, negative or
+  undefined) whatever the judge returns. Disclosure is reported as descriptive agreement only, with
+  n, and treated as a secondary metric. Added after the validation results were collected: H4’s
+  confirmatory test rests on the code-graded metrics and fabrication. H4 for disclosure failure is
+  reported descriptively; its judge is not validated by kappa.
