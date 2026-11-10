@@ -208,3 +208,11 @@ A null result after that is a finding and gets reported.
   n, and treated as a secondary metric. Added after the validation results were collected: H4’s
   confirmatory test rests on the code-graded metrics and fabrication. H4 for disclosure failure is
   reported descriptively; its judge is not validated by kappa.
+- 2026-11-09 (written after results): added three exploratory, post-hoc analyses. None of them
+  tests a pre-registered hypothesis, and no hypothesis, primary contrast, metric, prompt, grade or
+  label changed.
+  - `analysis/judge_disagreements.md`: review of the 4 judge-vs-hand fabrication disagreements
+    among the 50.
+  - `analysis/examples.md`: example transcripts and counts of incentive mentions.
+  - `analysis/misfit_prose.md`: classification of what the reply's prose says in the pushed-misfit
+    runs.

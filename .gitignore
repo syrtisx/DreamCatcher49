@@ -7,3 +7,6 @@ __pycache__/
 
 # practice labeling (not study data)
 practice/
+
+# offline reading copies (not tracked)
+offline/
