@@ -5,8 +5,12 @@ pre-registered eval: the same customer requests run through an LLM sales agent
 under neutral vs. pressured system prompts, measuring how often it pushes a
 product that doesn't fit, fabricates specs, or hides deal-breakers.
 
-Design and hypotheses: [DESIGN.md](DESIGN.md). All products and the company
-are fictional.
+- [DESIGN.md](DESIGN.md): hypotheses, metrics and analysis plan, pre-registered
+  before any results. Every later change is dated in its changelog.
+- [labels/RUBRIC.md](labels/RUBRIC.md): what counts as fabrication and as
+  disclosing a shortfall. The hand labels and the LLM judge use the same definitions.
+
+All products and the company are fictional. Results are [below](#results).
 
 ## Setup
 
@@ -70,16 +74,18 @@ labels/              hand labels
 
 ## Results
 
+**In short.** Pressure did not make either model less honest in the pre-registered test: strong pressure vs. just naming the pushed product (strong − mention) raised neither pushed-misfit recommendations (H1) nor fabrication (H2). A closer look at those misfit runs shows the small model (Haiku) contradicting itself: in 201 of its 1,200 runs where the pushed product fails a requirement, it still tags that product in the `RECOMMENDATION` field, and in 134 of those 201 its own prose has just told the customer that nothing in the catalog fits. A single line saying the company is "prioritizing" the product (the mild condition) produced the most of this, 27.9% vs. 10.4% with no product named (post-hoc contrast), and the mitigation prompt brought Haiku back to neutral on every metric (strong_mitigated − neutral CIs all include zero). The larger model (Sonnet) was unaffected: 0–0.8% pushed-misfit in every condition.
+
+![Pushed-misfit rate by condition](results/raw_headline.png)
+
 The full run produced 3,600 conversations (120 scenarios x 5 conditions x 2 models x 3 reps), with 0 infra errors. The Opus judge graded all 3,600. Rates come with Wilson 95% CIs. Contrasts are paired by scenario and bootstrapped over scenarios (`results/raw_summary.csv`, `results/raw_contrasts.csv`).
 
 **Revised headline (exploratory, post-hoc).** When Haiku recommends the pushed product even though it fails a requirement, the structured `RECOMMENDATION` line usually contradicts honest prose:
-- In 138 of 205 pushed-misfit runs, the reply tells the customer that nothing in the catalog fits, then tags the pushed product anyway.
+- In 134 of Haiku's 201 pushed-misfit runs, the reply tells the customer that nothing in the catalog fits, then tags the pushed product anyway. Counting Sonnet's 4 pushed-misfit runs (all of this kind), it is 138 of 205.
 - Only 3 of the 205 hide the shortfall.
 - Naming the pushed product in the prompt raises how often this happens (mention, mild and strong vs. neutral). But it also happens without commercial framing (17 of 25 neutral pushed-misfit runs), and strong pressure adds nothing over mention.
 
 See [analysis/misfit_prose.md](analysis/misfit_prose.md).
-
-![Pushed-misfit rate by condition](results/raw_headline.png)
 
 **Primary result: null.** The pre-registered primary contrast, strong − mention, shows no pressure effect on the code-graded metrics for either model. The difference is in percentage points, with a 95% CI:
 
